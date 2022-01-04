@@ -1,0 +1,230 @@
+body {
+  background-color: white;
+}
+
+.container-fluid {
+  height: 2.5em;
+}
+
+/* ========================================================= */
+
+.grid-container10 {
+  height: 85vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.grid-container20 {
+  height: 85vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+}
+
+.grid-container50 {
+  height: 85vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(50, 1fr);
+  grid-template-rows: repeat(50, 1fr);
+}
+
+.grid-container75 {
+  height: 85vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(75, 1fr);
+  grid-template-rows: repeat(75, 1fr);
+}
+
+.grid-container100 {
+  height: 85vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+}
+
+/* ========================================================= */
+
+.grid-item {
+  border: 1px solid aqua;
+  /* border-radius: 10%; */
+  /* border-style: solid none none solid; */
+  padding: 90/50vh;
+  /* margin: 0.05em; */
+  margin: 0 -1px -1px 0;
+}
+.grid-item:hover {
+  transition: 0.3s;
+  border: 1px solid rebeccapurple;
+  /* background-color: aqua; */
+  /* border-style: solid none none solid; */
+  padding: 90/50+2 vh;
+  /* margin: 0.05em; */
+  margin: -3px;
+}
+
+/* ========================================================= */
+
+.grid-item_sort {
+  /* border: 1px solid aqua; */
+  /* border-radius: 10%; */
+  /* border-style: none solid none solid; */
+  padding: 90/50vh;
+  /* margin: 0.05em; */
+  margin: 0 -1px -1px 0;
+}
+
+.grid-container10_sort {
+  height: 85vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.grid-container20_sort {
+  height: 85vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+}
+
+.grid-container50_sort {
+  height: 85vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  grid-template-rows: repeat(50, 1fr);
+}
+
+.grid-container75_sort {
+  height: 85vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(150, 1fr);
+  grid-template-rows: repeat(75, 1fr);
+}
+
+.grid-container100_sort {
+  height: 85vh;
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: repeat(200, 1fr);
+  grid-template-rows: repeat(100, 1fr);
+}
+
+.grid-item_pile {
+  border: 1px solid purple;
+  border-style: none solid;
+  background-color: aqua;
+  padding: 90/50vh;
+  /* transition-duration: 2s; */
+  /* transition: width 2s, height 2s, transform 2s; */
+  /* margin: 0.05em; */
+  margin: 0 -1px -1px 0;
+}
+
+/* ========================================================= */
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: white;
+}
+
+.grid-item_start {
+  border: 1px solid aqua;
+  background-color: green;
+  padding: 90/50vh;
+  /* margin: 0.05em; */
+  margin: 0 -1px -1px 0;
+  transition: opacity 5s;
+  transition-duration: 0.5s;
+}
+
+.grid-item_end {
+  border: 1px solid aqua;
+  background-color: red;
+  padding: 90/50vh;
+  /* margin: 0.05em; */
+  margin: 0 -1px -1px 0;
+  transition-duration: 0.5s;
+}
+
+.grid-item_wall {
+  border: 1px solid aqua;
+  background-color: gray;
+  padding: 90/50vh;
+  transition-duration: 2s;
+
+  /* transition: width 2s, height 2s, transform 2s; */
+  /* margin: 0.05em; */
+  margin: 0 -1px -1px 0;
+}
+
+.legend_colors {
+  height: 5vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
+}
+
+.legend_colors_item {
+  /* border: 1px solid black; */
+  font-size: 30px;
+  /* justify-self: ; */
+  color: black;
+  padding: 10px;
+  margin-top: -17px;
+  /* margin: 1em; */
+}
+
+.rectangle_start {
+  height: 20px;
+  width: 20px;
+  background-color: green;
+  margin-left: 50px;
+}
+
+.rectangle_end {
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  margin-left: 50px;
+}
+
+#algorithmStart:hover {
+  border: 3px solid red;
+  border-radius: 20%;
+}
+
+.animation_one {
+  background-color: blueviolet;
+}
+
+/* .algorithmSelector {
+
+} */
+
+.alg_open_list {
+  background-color: darksalmon;
+  transition: 0.2s;
+}
+
+.alg_closed_list {
+  background-color: chocolate;
+  transition: 0.2s;
+}
+
+.alg_backprop {
+  background-color: yellow;
+  transition: 1s;
+}
+
+.snake_tail {
+  background-color: springgreen;
+}

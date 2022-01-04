@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if (header_name=='path_header' ) { %>
+      <title>Pathfinder application</title>
+    <% } else if (header_name=='snake_header' ) { %>
+      <title>Snake game</title>
+    <% } %>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/applic.css">
+
+    <script src="/js/bootstrap.min.js"></script>    
+
+</head>
+<body>
+
+  <div>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+                <% if (header_name == 'path_header')  { %> 
+                Pathfinder
+                <% } else if (header_name == 'snake_header') { %> 
+                Snake game
+                <% } %> 
+              </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse d-flex justify-content-around" id="navbarSupportedContent">
+
+              <ul class="navbar-nav me-auto ">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Making a Maze</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item dropMaze" href="#">Recursive Maze</a></li>
+                    <li><a class="dropdown-item dropMaze" href="#">Binarry Tree Maze</a></li>
+                    <!-- <li><a class="dropdown-item dropMaze" href="#">Deterministic Maze</a></li> -->
+                  </ul>
+                <% if (header_name=='path_header' ) { %>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle algorithmSelector" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">Choosing the algorithm</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item drop1" href="#">A star algorithm</a></li>
+                      <li><a class="dropdown-item drop1" href="#">Dijstraks algorithm</a></li>
+                      <li><a class="dropdown-item drop1" href="#">Breath-first search algorithm</a></li>
+                      <li><a class="dropdown-item drop1" href="#">Deep-first search algorithm</a></li>
+                      <!-- <li><a class="dropdown-item drop1" href="#">Greedy best first search</a></li> -->
+                    </ul>
+                  </li>
+                <% } %>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="algor_speed" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Speed: Fast</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item drop2" href="#">Super Fast</a></li>
+                    <li><a class="dropdown-item drop2" href="#">Fast</a></li>
+                    <li><a class="dropdown-item drop2" href="#">Medium</a></li>
+                    <li><a class="dropdown-item drop2" href="#">Slow</a></li>
+                    <li><a class="dropdown-item drop2" href="#">Super Slow</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="set_grid_size" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">Grid size: <%=max_col%></a>
+                  <% if (header_name=='path_header' ) { %>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item drop3" href="/path/10">10</a></li>
+                      <li><a class="dropdown-item drop3" href="/path/20">20</a></li>
+                      <li><a class="dropdown-item drop3" href="/path/50">50</a></li>
+                      <li><a class="dropdown-item drop3" href="/path/75">75</a></li>
+                      <li><a class="dropdown-item drop3" href="/path/100">100</a></li>
+                    </ul>
+                    <% } else if (header_name=='snake_header' ) { %>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item drop3" href="/snake/10">10</a></li>
+                        <li><a class="dropdown-item drop3" href="/snake/20">20</a></li>
+                        <li><a class="dropdown-item drop3" href="/snake/50">50</a></li>
+                        <li><a class="dropdown-item drop3" href="/snake/75">75</a></li>
+                        <li><a class="dropdown-item drop3" href="/snake/100">100</a></li>
+                      </ul>
+                      <% } %>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <% if (header_name=='path_header' ) { %>
+                    <a class="nav-link" id="algorithmStart" aria-current="page" href="#">Select Algorithm</a>
+                    <% } else if (header_name=='snake_header' ) { %>
+                      <a class="nav-link" id="algorithmStart" aria-current="page" href="#">Start the game</a>
+                      <% } %>
+                </li>
+              </ul>
+
+              <ul class="navbar-nav ms-auto">
+                <% if (header_name=='path_header' ) { %>
+                <li class="nav-item">
+                  <a class="nav-link clear_path" aria-current="page" href="#">Clear the path</a>
+                </li>
+                <% } %>
+                <li class="nav-item">
+                  <a class="nav-link clear_wall" aria-current="page" href="#">Clear the walls</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link clear_board" aria-current="page" href="#">Clear the board</a>
+                </li>
+              </ul>
+
+
+          </div>
+        </div>
+      </nav>
+    </div>
+
+      
+
+
