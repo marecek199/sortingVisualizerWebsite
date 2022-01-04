@@ -45,8 +45,8 @@ app.get('/snake/:id', (req, res) => {
 })
 
 
-app.listen(3000, (req, res) => {
-    console.log('Server is running on port 3000!')
+app.listen(8080, (req, res) => {
+    console.log('Server is running on port 8080!')
 })
 
 
